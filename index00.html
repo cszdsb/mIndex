@@ -1329,25 +1329,25 @@ ga('ec:addImpression', { 'id': '394353', 'name': 'Beelink U57 Intel Core i5-5257
         });
 
         function classifiedTab() {
-            var classifiedCon = $('#classifiedContent');
-            var classli = $('#classifiedul li');
-            var classcon = classifiedCon.find('ul');
-            var classconL = classcon.length;
-            var winW = $(window).width();
+            // var classifiedCon = $('#classifiedContent');
+            // var classli = $('#classifiedul li');
+            // var classcon = classifiedCon.find('ul');
+            // var classconL = classcon.length;
+            // var winW = $(window).width();
             // classcon.width(winW);
             // var classifiedConW = winW * classconL;
             // classifiedCon.width(classifiedConW);
-            classli.each(function () {
-                var indexli = $(this).index();
-                $(this).on('click', function (e) {
-                    e.preventDefault();
-                    classifiedCon.css({
-                        "transform": "translate3d(" + -indexli * winW + "px,0px,0px)",
-                        "transition-duration": "300ms"
-                    });
-                    $(this).stop().addClass('actived').siblings('li').removeClass('actived');
-                });
-            });
+            // classli.each(function () {
+            //     var indexli = $(this).index();
+            //     $(this).on('click', function (e) {
+            //         e.preventDefault();
+            //         classifiedCon.css({
+            //             "transform": "translate3d(" + -indexli * winW + "px,0px,0px)",
+            //             "transition-duration": "300ms"
+            //         });
+            //         $(this).stop().addClass('actived').siblings('li').removeClass('actived');
+            //     });
+            // });
             // function prevent_default(e) {
             //     e.preventDefault();
             // }
