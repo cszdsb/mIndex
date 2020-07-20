@@ -1334,8 +1334,8 @@ ga('ec:addImpression', { 'id': '394353', 'name': 'Beelink U57 Intel Core i5-5257
             var classcon = classifiedCon.find('ul');
             var classconL = classcon.length;
             var winW = $(window).width();
-            classcon.width(winW);
-            var classifiedConW = winW * classconL;
+            // classcon.width(winW);
+            // var classifiedConW = winW * classconL;
             // classifiedCon.width(classifiedConW);
             classli.each(function () {
                 var indexli = $(this).index();
@@ -1348,57 +1348,57 @@ ga('ec:addImpression', { 'id': '394353', 'name': 'Beelink U57 Intel Core i5-5257
                     $(this).stop().addClass('actived').siblings('li').removeClass('actived');
                 });
             });
-            function prevent_default(e) {
-                e.preventDefault();
-            }
-            function enable_scroll() {
-                $(document).off('touchmove', prevent_default);
-            }
-            var Drags = {};
-            Drags.dragtag = false;
-            Drags.dragstart = true;
-            Drags.datatransx = 0;
-            Drags.index = 0;
-            Drags.conL = classconL;
-            classifiedCon.on('touchstart', function (e) {
-                if (e.originalEvent.targetTouches) {
-                    Drags.dragx = e.originalEvent.targetTouches[0].pageX;
-                } else {
-                    Drags.dragx = e.pageX;
-                }
-                Drags.dragtag = true;
-                Drags.dragstart = true;
-            }).on('touchmove', function (e) {
-                if (Drags.dragtag) {
-                    Drags.change = 0;
-                    if (e.originalEvent.targetTouches) {
-                        Drags.change = e.originalEvent.targetTouches[0].pageX - Drags.dragx;
+            // function prevent_default(e) {
+            //     e.preventDefault();
+            // }
+            // function enable_scroll() {
+            //     $(document).off('touchmove', prevent_default);
+            // }
+            // var Drags = {};
+            // Drags.dragtag = false;
+            // Drags.dragstart = true;
+            // Drags.datatransx = 0;
+            // Drags.index = 0;
+            // Drags.conL = classconL;
+            // classifiedCon.on('touchstart', function (e) {
+            //     if (e.originalEvent.targetTouches) {
+            //         Drags.dragx = e.originalEvent.targetTouches[0].pageX;
+            //     } else {
+            //         Drags.dragx = e.pageX;
+            //     }
+            //     Drags.dragtag = true;
+            //     Drags.dragstart = true;
+            // }).on('touchmove', function (e) {
+            //     if (Drags.dragtag) {
+            //         Drags.change = 0;
+            //         if (e.originalEvent.targetTouches) {
+            //             Drags.change = e.originalEvent.targetTouches[0].pageX - Drags.dragx;
 
-                    } else {
-                        Drags.change = e.pageX - Drags.dragx;
-                    }
-                }
-            }).on('touchend', function (e) {
-                if (Drags.change < -winW / 6) {
-                    Drags.index++;
-                    if (Drags.index == Drags.conL) { Drags.index = Drags.conL - 1 };
-                    classli.eq(Drags.index).addClass('actived').siblings('li').removeClass('actived');
-                    classifiedCon.css({
-                        "transform": "translate3d(" + -Drags.index * winW + "px,0px,0px)",
-                        "transition-duration": "300ms"
-                    });
-                } else if (Drags.change > winW / 6) {
-                    Drags.index--;
-                    if (Drags.index == -1) { Drags.index = 0 };
-                    classli.eq(Drags.index).addClass('actived').siblings('li').removeClass('actived');
-                    classifiedCon.css({
-                        "transform": "translate3d(" + -Drags.index * winW + "px,0px,0px)",
-                        "transition-duration": "300ms"
-                    });
-                }
-                Drags.dragtag = false;
-                enable_scroll();
-            });
+            //         } else {
+            //             Drags.change = e.pageX - Drags.dragx;
+            //         }
+            //     }
+            // }).on('touchend', function (e) {
+            //     if (Drags.change < -winW / 6) {
+            //         Drags.index++;
+            //         if (Drags.index == Drags.conL) { Drags.index = Drags.conL - 1 };
+            //         classli.eq(Drags.index).addClass('actived').siblings('li').removeClass('actived');
+            //         classifiedCon.css({
+            //             "transform": "translate3d(" + -Drags.index * winW + "px,0px,0px)",
+            //             "transition-duration": "300ms"
+            //         });
+            //     } else if (Drags.change > winW / 6) {
+            //         Drags.index--;
+            //         if (Drags.index == -1) { Drags.index = 0 };
+            //         classli.eq(Drags.index).addClass('actived').siblings('li').removeClass('actived');
+            //         classifiedCon.css({
+            //             "transform": "translate3d(" + -Drags.index * winW + "px,0px,0px)",
+            //             "transition-duration": "300ms"
+            //         });
+            //     }
+            //     Drags.dragtag = false;
+            //     enable_scroll();
+            // });
         }
 
         classifiedTab();
