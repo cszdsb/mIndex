@@ -948,7 +948,7 @@
         <li class="classified_channel_li">Recommended</li>
     </ul>
     <div class="classified_content clearfix">
-        <div class="c_tabBox" id="classifiedContent" style="overflow: hidden;">
+        <div class="c_tabBox" id="classifiedContent">
             <ul class="classified_content_ul">
                     <li>
                         <div class="classified_product">
@@ -1336,7 +1336,7 @@ ga('ec:addImpression', { 'id': '394353', 'name': 'Beelink U57 Intel Core i5-5257
             var winW = $(window).width();
             classcon.width(winW);
             var classifiedConW = winW * classconL;
-            classifiedCon.width(classifiedConW);
+            // classifiedCon.width(classifiedConW);
             classli.each(function () {
                 var indexli = $(this).index();
                 $(this).on('click', function (e) {
