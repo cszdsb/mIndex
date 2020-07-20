@@ -218,6 +218,12 @@
 <div class="mheader">
     <div class="branch-journeys-top"></div>
     <style type="text/css" media="screen">
+    .classified_content_ul{
+        float: none!important;
+    }
+    #classifiedContent{
+        display: flex;
+    }
     .gdpr-cookie {
         background-color: #efeff4;
         width: 100%;
@@ -1393,9 +1399,9 @@ ga('ec:addImpression', { 'id': '394353', 'name': 'Beelink U57 Intel Core i5-5257
             });
         }
 
-        // classifiedTab();
+        classifiedTab();
         $(window).resize(function () {
-            // classifiedTab();
+            classifiedTab();
             $('.classified_channel_li').first().addClass('actived').siblings('li').removeClass('actived');
             $('#classifiedContent').css({
                 "transform": "translate3d(0px,0px,0px)",
