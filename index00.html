@@ -220,6 +220,8 @@
     <style type="text/css" media="screen">
     .classified_content_ul{
         float: none!important;
+        width: 100%;
+        flex: 0 0 auto;
     }
     #classifiedContent{
         display: flex;
@@ -1399,9 +1401,9 @@ ga('ec:addImpression', { 'id': '394353', 'name': 'Beelink U57 Intel Core i5-5257
             });
         }
 
-        classifiedTab();
+        // classifiedTab();
         $(window).resize(function () {
-            classifiedTab();
+            // classifiedTab();
             $('.classified_channel_li').first().addClass('actived').siblings('li').removeClass('actived');
             $('#classifiedContent').css({
                 "transform": "translate3d(0px,0px,0px)",
